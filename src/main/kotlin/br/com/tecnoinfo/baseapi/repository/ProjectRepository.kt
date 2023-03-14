@@ -13,5 +13,5 @@ interface ProjectRepository : JpaRepository<Project, Long>, JpaSpecificationExec
     fun findByName(name: String, pageable: Pageable): Page<Project>
 
     @Query("select name from PROJECT", nativeQuery = true)
-    fun findNameProjects(): List<ProjectNameProjection>
+    fun findNameProjects(pageable: Pageable): List<ProjectNameProjection>
 }

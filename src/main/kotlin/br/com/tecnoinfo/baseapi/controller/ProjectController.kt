@@ -41,8 +41,8 @@ class ProjectController(private val projectService: ProjectService) {
     }
 
     @GetMapping("projection")
-    fun findNameAllProject(): ApiResponse<List<ProjectNameProjection>> {
-        return ApiResponse(data = projectService.findNameAllProjects())
+    fun findNameAllProject(@PageableDefault(page = 0, size = 30) pageable: Pageable): ApiResponse<List<ProjectNameProjection>> {
+        return ApiResponse(data = projectService.findNameAllProjects(pageable))
     }
 
     @PostMapping

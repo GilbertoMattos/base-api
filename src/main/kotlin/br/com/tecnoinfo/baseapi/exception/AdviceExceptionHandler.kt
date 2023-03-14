@@ -32,7 +32,7 @@ class AdviceExceptionHandler {
 
     @ResponseStatus(HttpStatus.NOT_FOUND)
     @ExceptionHandler(RegistryNotFoundException::class)
-    fun regustryNotFound(ex: RegistryNotFoundException): ResponseEntity<ApiResponse<*>> {
+    fun registryNotFound(ex: RegistryNotFoundException): ResponseEntity<ApiResponse<*>> {
         return ResponseEntity(
             ApiResponse(
                 status = HttpStatus.NOT_FOUND,
