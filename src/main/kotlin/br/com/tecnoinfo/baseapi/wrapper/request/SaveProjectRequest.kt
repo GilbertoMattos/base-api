@@ -1,7 +1,6 @@
 package br.com.tecnoinfo.baseapi.wrapper.request
 
 import br.com.tecnoinfo.baseapi.model.SizeEnum
-import com.fasterxml.jackson.annotation.JsonFormat
 import java.time.LocalDate
 import javax.validation.constraints.NotEmpty
 import javax.validation.constraints.NotNull
@@ -14,7 +13,6 @@ data class SaveProjectRequest(
     val name: String? = "",
 
     @field:NotNull
-    @JsonFormat(pattern = "dd/MM/yyyy", timezone = "America/SaoPaulo")
     val creationDate: LocalDate? = null,
 
     @field:NotNull

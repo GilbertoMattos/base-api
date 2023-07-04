@@ -15,9 +15,7 @@ import br.com.tecnoinfo.baseapi.wrapper.response.ApiResponse
 import br.com.tecnoinfo.baseapi.wrapper.response.ProjectResponse
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
-import org.springframework.data.domain.Sort
 import org.springframework.data.jpa.domain.Specification
-import org.springframework.data.web.PageableDefault
 import org.springframework.stereotype.Service
 
 @Service
